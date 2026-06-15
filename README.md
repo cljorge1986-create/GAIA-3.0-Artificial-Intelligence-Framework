@@ -1,117 +1,166 @@
 # GAIA 3.0 — Artificial Intelligence Framework
 
 <p align="center">
-  <b>Uma plataforma modular de Inteligência Artificial local, extensível e orientada para memória, interação e criação.</b>
+  <b>A modular Artificial Intelligence platform focused on conversation, memory, creativity and expansion.</b>
 </p>
-  <h1>Work in Progress</h1> 
-  <h3>This project is a work in progress (WIP).</h3>
-  <h3>The frontend has been developed, and the next step is building the backend systems.<h3/>
-
 
 ---
 
-## Sobre o projeto
+##  Preview
 
-**GAIA 3.0** é uma plataforma de inteligência artificial desenvolvida para funcionar como um ambiente modular de interação entre humanos e sistemas inteligentes.
-## 🖥️ Preview
-
-<img src="docs/images/gaia-preview.png" width="900">
-
-O objetivo do projeto é criar uma IA que não seja apenas um chatbot, mas uma infraestrutura capaz de integrar:
-
-- conversação inteligente
-- memória persistente
-- módulos especializados
-- visualização
-- análise
-- criação de conteúdos
-- expansão através de novos sistemas
-
-A arquitetura foi pensada para ser executada localmente, permitindo maior controlo sobre dados, modelos e personalização.
+<img src="docs/images/gaia-preview.png" width="100%">
 
 ---
 
-# Funcionalidades
+##  Demo
 
-## GAIA Chat
+A short demonstration of GAIA 3.0:
 
-Sistema principal de conversação:
-
-- gestão de múltiplas conversas
-- histórico persistente
-- títulos automáticos
-- memória baseada em contexto
-- perfis de interação
-- suporte para diferentes estilos de resposta
+▶️ **Video:**  
+[Watch GAIA Demo](docs/videos/gaia-demo.mp4)
 
 ---
 
-## Sistema de Memória
+##  Work in Progress (WIP)
 
-O GAIA inclui uma camada de memória para:
+GAIA 3.0 is currently under active development.
 
-- guardar informação relevante
-- recuperar contexto anterior
-- organizar conversas
-- preparar integração com embeddings e pesquisa semântica
+The frontend has already been developed, and the next phase is building the backend systems, AI integration and core architecture.
 
 ---
 
-# Arquitetura Modular
+#  About GAIA
 
-A aplicação está dividida em módulos independentes.
+GAIA is a local-first Artificial Intelligence framework designed to evolve beyond a simple chatbot.
 
-## GAIA
-Núcleo de inteligência e conversação.
+The goal is to create a modular AI environment capable of:
 
-## THOTH
-Sistema relacionado com análise, processamento e modos inteligentes.
+- intelligent conversations
+- persistent memory
+- specialized modules
+- local AI models
+- creative tools
+- data analysis
+- interactive systems
 
-## DIONYSUS
-Módulo criativo:
-
-- conteúdos
-- documentos
-- código
-- multimédia
-- exploração de informação
-
-## APOLLO
-
-Ferramentas de visualização:
-
-- visualizador 2D
-- visualizador 3D
-- suporte Three.js
-- carregamento de modelos
-
-## ARTEMIS
-
-Módulos auxiliares e ferramentas experimentais.
+The project focuses on giving users control over their data, models and AI environment.
 
 ---
 
-# Tecnologias
+#  Features
+
+## 💬 GAIA Chat
+
+Main conversational system:
+
+- Multiple conversations
+- Persistent chat history
+- Chat management
+- Context handling
+- Custom interaction profiles
+
+---
+
+##  Memory System
+
+GAIA includes a memory layer designed for:
+
+- storing information
+- retrieving previous context
+- organizing conversations
+- semantic search integration
+
+---
+
+## 🧩 Modular Architecture
+
+GAIA is built around independent modules.
+
+### 🌿 GAIA
+
+Core AI assistant and conversation engine.
+
+---
+
+### 🔮 THOTH
+
+Analysis and intelligence tools.
+
+---
+
+### 🎭 DIONYSUS
+
+Creative module:
+
+- content creation
+- documents
+- code assistance
+- generation tools
+
+---
+
+### 🚀 APOLLO
+
+Visualization module:
+
+- 3D viewer
+- WebGL rendering
+- Three.js integration
+
+---
+
+###  ARTEMIS
+
+Experimental and auxiliary systems.
+
+---
+
+#  Technologies
 
 ## Backend
 
 - Python
 - Flask
 - SQLite
-- API REST
+- REST API
 
 ## Frontend
 
 - HTML5
 - CSS3
 - JavaScript
-- módulos JS independentes
 
-## Visualização
+## Visualization
 
 - Three.js
 - WebGL
 
 ---
 
-# 📁 Estrutura do projeto
+# Project Structure
+GAIA3.0/
+
+├── config/
+│   └── system configuration
+│
+├── db/
+│   └── database management
+│
+├── gaia_core/
+│   └── artificial intelligence core
+│
+├── languages/
+│   └── language support
+│
+├── web/
+│
+│   ├── templates/
+│   │   ├── HTML pages
+│   │   └── interface modules
+│   │
+│   └── static/
+│       ├── css/
+│       ├── js/
+│       └── images
+│
+└── run_gaia.py
