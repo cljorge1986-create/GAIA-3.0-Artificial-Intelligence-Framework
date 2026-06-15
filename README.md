@@ -6,9 +6,17 @@
 
 ---
 
-##  Preview
+##  Preview: GAIA Evolution
 
-<img src="docs/images/gaia-preview.png" width="100%">
+The following images represent the evolution of GAIA throughout its development.
+
+The first version started as a simple interface with the initial foundations of the system.
+<img src="data/0.1.png" width="100%">
+Over time, GAIA evolved into a more complex architecture, introducing additional modules, improved interaction, and a more structured environment.
+<img src="data/1.1.png" width="100%">
+The latest version was designed with integration in mind, preparing the system to connect all its components and enable a more complete AI framework.
+<img src="data/3.0.png" width="100%">
+GAIA version 2 was very similar to version 3 in terms of structure and design. However, it did not yet include the settings system for customization, which is why it was not included in this comparison.
 
 ---
 
