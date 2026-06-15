@@ -138,28 +138,26 @@ Experimental and auxiliary systems.
 
 # Project Structure
 GAIA3.0/
-
-##### ├── config/
-##### │   └── system configuration
-##### │
-##### ├── db/
-##### │   └── database management
-##### │
-##### ├── gaia_core/
-##### │   └── artificial intelligence core
-##### │
-##### ├── languages/
-##### │   └── language support
-##### │
-##### ── web/
-##### │
-##### │   ├── templates/
-##### │   │   ├── HTML pages
-##### │   │   └── interface modules
-##### │   │
-##### │   └── static/
-##### │       ├── css/
-##### │       ├── js/
-##### │       └── images
-##### │
-##### └── run_gaia.py
+<p> ├── config/</p>
+<p> │   └── system configuration</p>
+<p> │</p>
+<p> ├── db/</p>
+<p> │   └── database management</p>
+ │
+ ├── gaia_core/
+ │   └── artificial intelligence core
+ │
+ ├── languages/
+ │   └── language support
+ │
+ ├── web/
+ │   ├── templates/
+ │   │   ├── HTML pages
+ │   │   └── interface modules
+ │   │
+ │   └── static/
+ │       ├── css/
+ │       ├── js/
+ │       └── images
+ │
+ └── run_gaia.py
