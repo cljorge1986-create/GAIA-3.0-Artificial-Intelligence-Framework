@@ -139,16 +139,16 @@ Experimental and auxiliary systems.
 # Project Structure
 GAIA3.0/
 
-#├── config/
-#│   └── system configuration
-#│
-#├── db/
-#│   └── database management
-#│
-#├── gaia_core/
-#│   └── artificial intelligence core
-#│
-#├── languages/
+# ├── config/
+# │   └── system configuration
+# │
+# ├── db/
+# │   └── database management
+# │
+# ├── gaia_core/
+# │   └── artificial intelligence core
+# │
+# ├── languages/
 #│   └── language support
 #│
 #├── web/
