@@ -2,10 +2,11 @@
 
 <p align="center">
   <b>Uma plataforma modular de Inteligência Artificial local, extensível e orientada para memória, interação e criação.</b>
+</p>
   ## Work in Progress
   This project is a work in progress (WIP).
   The frontend has been developed, and the next step is building the backend systems.
-</p>
+
 
 ---
 
