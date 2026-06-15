@@ -20,15 +20,6 @@ GAIA version 2 was very similar to version 3 in terms of structure and design. H
 
 ---
 
-##  Demo
-
-A short demonstration of GAIA 3.0:
-
-▶️ **Video:**  
-[Watch GAIA Demo](docs/videos/gaia-demo.mp4)
-
----
-
 ##  Work in Progress (WIP)
 
 GAIA 3.0 is currently under active development.
