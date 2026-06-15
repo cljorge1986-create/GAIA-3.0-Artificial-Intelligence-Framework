@@ -48,7 +48,7 @@ The project focuses on giving users control over their data, models and AI envir
 
 #  Features
 
-## 💬 GAIA Chat
+## GAIA Chat
 
 Main conversational system:
 
@@ -71,23 +71,23 @@ GAIA includes a memory layer designed for:
 
 ---
 
-## 🧩 Modular Architecture
+## Modular Architecture
 
 GAIA is built around independent modules.
 
-### 🌿 GAIA
+### GAIA
 
 Core AI assistant and conversation engine.
 
 ---
 
-### 🔮 THOTH
+### THOTH
 
 Analysis and intelligence tools.
 
 ---
 
-### 🎭 DIONYSUS
+### DIONYSUS
 
 Creative module:
 
@@ -98,7 +98,7 @@ Creative module:
 
 ---
 
-### 🚀 APOLLO
+### APOLLO
 
 Visualization module:
 
