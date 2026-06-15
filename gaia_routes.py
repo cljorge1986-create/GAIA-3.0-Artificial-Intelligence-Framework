@@ -4,27 +4,6 @@ from functools import wraps
 from flask import request, jsonify, session
 import requests as req
 
-
-log = logging.getLogger(__name__)
-
-ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
-OPENAI_API_KEY    = os.getenv('OPENAI_API_KEY',    '')
-WEATHER_API_KEY   = os.getenv('WEATHER_API_KEY',   '')
-ANTHROPIC_MODEL   = os.getenv('ANTHROPIC_MODEL',   'claude-opus-4-5')
-OPENAI_MODEL      = os.getenv('OPENAI_MODEL',       'gpt-4o')
-DEFAULT_PROFILE   = 'WARM'
-
-GAIA_PROFILES = {
-    'WARM':       'És a GAIA, calorosa e empática..',
-    'DIRECT':     'És a GAIA. Respostas directas, sem rodeios..',
-    'STRICT':     'És a GAIA, formal e rigorosa. Registo formal.',
-    'MECHANICAL': 'GAIA AI SYSTEM. Pure information transfer. No emotional language.',
-    'ANALYTICAL': 'És a GAIA, analítica. Usa dados, métricas e lógica.',
-}
-
-chat_sessions: dict = {}
-
-
 def register_routes(app):
 
     @app.route('/api/chat', methods=['POST'])
