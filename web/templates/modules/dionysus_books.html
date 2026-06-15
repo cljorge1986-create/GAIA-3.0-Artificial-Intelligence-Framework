@@ -1,0 +1,26 @@
+{# MÓDULO: Dionysus — Livros  |  JS: dionysus_content.js #}
+<div id="moduleBooks" class="module-panel">
+  <div class="mod-header">
+    <div class="mod-header-title" style="color:#f97316">DIONYSUS · Livros</div>
+    <div class="mod-header-sub">Biblioteca e análise de livros</div>
+  </div>
+  <div class="text-module-workspace">
+    <div class="text-module-toolbar">
+      <input class="hz-input" id="booksSearch"
+        placeholder="Título, autor ou ISBN..." style="max-width:300px">
+      <select class="hz-select" id="booksGenre">
+        <option>Todos os géneros</option><option>Ficção Científica</option>
+        <option>Fantasia</option><option>Romance</option>
+        <option>Técnico</option><option>Não-ficção</option>
+      </select>
+      <button class="hz-btn hz-btn-primary" onclick="searchBooks()">🔍 Pesquisar</button>
+      <button class="hz-btn hz-btn-ghost"
+        onclick="document.getElementById('bookFileInput').click()">📂 Carregar PDF</button>
+      <input type="file" id="bookFileInput" accept=".pdf,.epub,.txt" style="display:none"
+        onchange="loadBook(this.files[0])">
+    </div>
+    <div class="text-module-content" id="booksContent">
+      <div class="hz-empty">Pesquisa livros ou carrega um ficheiro para começar.</div>
+    </div>
+  </div>
+</div>

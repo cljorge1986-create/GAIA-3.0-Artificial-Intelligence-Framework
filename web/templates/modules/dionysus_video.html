@@ -1,0 +1,47 @@
+{# MÓDULO: Dionysus — Vídeo  |  JS: dionysus_content.js #}
+<div id="moduleDionysusVideo" class="module-panel">
+  <div class="mod-header">
+    <div class="mod-header-title" style="color:#f97316">DIONYSUS · Vídeo</div>
+    <div class="mod-header-sub">Geração de vídeo por IA</div>
+  </div>
+  <div class="video-workspace">
+    <div class="video-sidebar">
+      <div style="padding:12px;display:flex;flex-direction:column;gap:8px">
+        <label class="field-label">Estilo</label>
+        <select class="hz-select" id="dVideoStyle" style="width:100%">
+          <option>Cinematográfico</option><option>Anime</option>
+          <option>Realista</option><option>Stop Motion</option><option>3D Animado</option>
+        </select>
+        <label class="field-label" style="margin-top:6px">Duração</label>
+        <select class="hz-select" id="dVideoDuration" style="width:100%">
+          <option>4s</option><option>8s</option><option>16s</option><option>30s</option>
+        </select>
+      </div>
+      <div class="video-list" id="dionysusVideoList">
+        <div class="hz-empty" style="padding:20px 10px">Nenhum vídeo gerado</div>
+      </div>
+    </div>
+    <div class="video-main">
+      <div class="video-player-area" id="dionysusPlayerArea">
+        <div style="opacity:0.3;text-align:center">
+          <div style="font-size:48px">🎬</div>
+          <div class="player-placeholder-label">AGUARDA GERAÇÃO</div>
+        </div>
+      </div>
+      <div class="video-query-row">
+        <textarea class="hz-input" id="dVideoPrompt"
+          placeholder="Descreve o vídeo a gerar..."
+          style="flex:1;height:48px;resize:none"></textarea>
+        <button class="hz-btn hz-btn-primary" onclick="generateVideo()">✦ Gerar</button>
+      </div>
+    </div>
+    <div class="video-right">
+      <div class="hz-panel" style="height:100%">
+        <div class="hz-panel-header">Propriedades</div>
+        <div class="hz-panel-body" id="dVideoProps">
+          <div class="hz-empty">Propriedades do vídeo.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

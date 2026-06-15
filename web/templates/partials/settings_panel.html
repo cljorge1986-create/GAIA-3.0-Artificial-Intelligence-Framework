@@ -1,0 +1,149 @@
+<div id="settingsOverlay" onclick="closeSettingsIfOutside(event)">
+  <div class="settings-panel" id="settingsPanel">
+
+    <div class="settings-header">
+      <div class="settings-title">⚙ Configurações GAIA</div>
+      <button class="settings-close" onclick="closeSettings()">✕</button>
+    </div>
+
+    <div class="settings-body">
+
+      <!-- Tema de cores -->
+      <div>
+        <div class="settings-section-label">Tema de Cores</div>
+        <div class="theme-grid" id="themeGrid">
+          <div class="theme-option selected" data-theme="green-blue" onclick="setTheme('green-blue',this)">
+            <div class="theme-swatch">
+              <div class="theme-dot" style="background:#b6ff4d"></div>
+              <div class="theme-dot" style="background:#00d4ff"></div>
+            </div>
+            <div class="theme-name">Verde-Azul</div>
+          </div>
+          <div class="theme-option" data-theme="blue-white" onclick="setTheme('blue-white',this)">
+            <div class="theme-swatch">
+              <div class="theme-dot" style="background:#38bdf8"></div>
+              <div class="theme-dot" style="background:#e2f8ff"></div>
+            </div>
+            <div class="theme-name">Azul-Branco</div>
+          </div>
+          <div class="theme-option" data-theme="blue-black" onclick="setTheme('blue-black',this)">
+            <div class="theme-swatch">
+              <div class="theme-dot" style="background:#3b82f6"></div>
+              <div class="theme-dot" style="background:#010510"></div>
+            </div>
+            <div class="theme-name">Azul-Preto</div>
+          </div>
+          <div class="theme-option" data-theme="red-white" onclick="setTheme('red-white',this)">
+            <div class="theme-swatch">
+              <div class="theme-dot" style="background:#f87171"></div>
+              <div class="theme-dot" style="background:#fef2f2"></div>
+            </div>
+            <div class="theme-name">Vermelho-Branco</div>
+          </div>
+          <div class="theme-option" data-theme="red-black" onclick="setTheme('red-black',this)">
+            <div class="theme-swatch">
+              <div class="theme-dot" style="background:#dc2626"></div>
+              <div class="theme-dot" style="background:#0a0101"></div>
+            </div>
+            <div class="theme-name">Vermelho-Preto</div>
+          </div>
+          <div class="theme-option" data-theme="amber-black" onclick="setTheme('amber-black',this)">
+            <div class="theme-swatch">
+              <div class="theme-dot" style="background:#f59e0b"></div>
+              <div class="theme-dot" style="background:#0c0800"></div>
+            </div>
+            <div class="theme-name">Âmbar-Preto</div>
+          </div>
+          <div class="theme-option" data-theme="purple-black" onclick="setTheme('purple-black',this)">
+            <div class="theme-swatch">
+              <div class="theme-dot" style="background:#a855f7"></div>
+              <div class="theme-dot" style="background:#06020f"></div>
+            </div>
+            <div class="theme-name">Roxo-Preto</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Perfil -->
+      <div>
+        <div class="settings-section-label">Perfil de Personalidade GAIA</div>
+        <div class="profile-grid" id="profileGrid">
+          <div class="profile-option selected" data-profile="WARM" onclick="setProfile('WARM',this)">
+            <div class="profile-icon">🌸</div>
+            <div class="profile-name">WARM</div>
+            <div class="profile-desc">Calorosa, empática e próxima</div>
+          </div>
+          <div class="profile-option" data-profile="DIRECT" onclick="setProfile('DIRECT',this)">
+            <div class="profile-icon">⚡</div>
+            <div class="profile-name">DIRECT</div>
+            <div class="profile-desc">Directa, sem rodeios</div>
+          </div>
+          <div class="profile-option" data-profile="STRICT" onclick="setProfile('STRICT',this)">
+            <div class="profile-icon">📋</div>
+            <div class="profile-name">STRICT</div>
+            <div class="profile-desc">Formal e rigorosa</div>
+          </div>
+          <div class="profile-option" data-profile="MECHANICAL" onclick="setProfile('MECHANICAL',this)">
+            <div class="profile-icon">🤖</div>
+            <div class="profile-name">MECHANICAL</div>
+            <div class="profile-desc">Máquina pura, sem emoção</div>
+          </div>
+          <div class="profile-option" data-profile="ANALYTICAL" onclick="setProfile('ANALYTICAL',this)">
+            <div class="profile-icon">📊</div>
+            <div class="profile-name">ANALYTICAL</div>
+            <div class="profile-desc">Analítica, orientada a dados</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preferências gerais -->
+      <div>
+        <div class="settings-section-label">Preferências Gerais</div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-row-label">Idioma de resposta</div>
+            <div class="settings-row-sub">Língua usada nas respostas de GAIA</div>
+          </div>
+          <select class="hz-select" id="settingsLang">
+            <option value="pt">Português</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+          </select>
+        </div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-row-label">Voz activada</div>
+            <div class="settings-row-sub">GAIA lê as respostas em voz alta</div>
+          </div>
+          <div class="hz-toggle" id="voiceToggle" onclick="toggleSetting('voiceToggle','voiceEnabled')"></div>
+        </div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-row-label">Memória persistente</div>
+            <div class="settings-row-sub">Guardar contexto entre sessões</div>
+          </div>
+          <div class="hz-toggle on" id="memoryToggle" onclick="toggleSetting('memoryToggle','memoryEnabled')"></div>
+        </div>
+
+        <div class="settings-row">
+          <div>
+            <div class="settings-row-label">Animações 3D</div>
+            <div class="settings-row-sub">Canvas Three.js (pode afectar performance)</div>
+          </div>
+          <div class="hz-toggle on" id="canvasToggle" onclick="toggleSetting('canvasToggle','canvasEnabled')"></div>
+        </div>
+      </div>
+
+    </div><!-- /settings-body -->
+
+    <div class="settings-footer">
+      <button class="hz-btn hz-btn-ghost" onclick="resetSettings()">Repor padrão</button>
+      <button class="hz-btn hz-btn-primary" onclick="saveSettings()">Guardar</button>
+    </div>
+
+  </div><!-- /settings-panel -->
+</div><!-- /settingsOverlay -->

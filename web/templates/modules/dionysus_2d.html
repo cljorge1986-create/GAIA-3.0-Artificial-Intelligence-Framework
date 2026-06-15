@@ -1,0 +1,38 @@
+{# MÓDULO: Dionysus — Imagens 2D  |  JS: dionysus_content.js #}
+<div id="moduleDionysus2D" class="module-panel">
+  <div class="mod-header">
+    <div class="mod-header-title" style="color:var(--hz-blue)">DIONYSUS · Imagens 2D</div>
+    <div class="mod-header-sub">Geração de imagens por IA</div>
+  </div>
+  <div class="two-col-workspace">
+    <div class="two-col-left">
+      <div class="hz-card-block">
+        <label class="field-label">Prompt de Geração</label>
+        <textarea class="hz-editor" id="d2dPrompt"
+          placeholder="Descreve a imagem que queres gerar..."
+          style="min-height:100px"></textarea>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+          <select class="hz-select" id="d2dStyle">
+            <option>Realista</option><option>Anime</option><option>Pintura</option>
+            <option>Sketch</option><option>3D Render</option><option>Pixel Art</option>
+          </select>
+          <select class="hz-select" id="d2dRatio">
+            <option>1:1</option><option>16:9</option><option>9:16</option><option>4:3</option>
+          </select>
+          <button class="hz-btn hz-btn-primary" onclick="generateImage2D()">✦ Gerar</button>
+        </div>
+      </div>
+      <div id="d2dOutput" class="img-output-placeholder">
+        <div class="hz-empty">A imagem gerada aparece aqui.</div>
+      </div>
+    </div>
+    <div class="two-col-right">
+      <div class="hz-panel">
+        <div class="hz-panel-header">Histórico</div>
+        <div class="hz-panel-body" id="d2dHistory">
+          <div class="hz-empty">Histórico de gerações.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

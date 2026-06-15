@@ -1,0 +1,52 @@
+{# ════════════════════════════════
+   MÓDULO: Apollo — Vídeo
+   JS:  static/js/modules/apollo_video.js  (partilhado com dionysus_video)
+   ════════════════════════════════ #}
+<div id="moduleApolloVideo" class="module-panel">
+
+  <div class="mod-header">
+    <div class="mod-header-title">APOLLO · Vídeo</div>
+    <div class="mod-header-sub">Análise de vídeo por IA</div>
+  </div>
+
+  <div class="video-workspace">
+
+    <div class="video-sidebar">
+      <div class="video-upload-zone" id="apolloVideoUpload"
+        onclick="document.getElementById('apolloVideoInput').click()">
+        <div style="font-size:28px;margin-bottom:8px">🎬</div>
+        <div style="font-size:12px;color:var(--hz-text-dim)">Carregar vídeo</div>
+        <div style="font-size:10px;color:var(--hz-text-muted);margin-top:4px">MP4 · WebM · MOV</div>
+      </div>
+      <input type="file" id="apolloVideoInput" accept="video/*" style="display:none"
+        onchange="loadVideoFile(this,'apollo')">
+      <div class="video-list" id="apolloVideoList">
+        <div class="hz-empty" style="padding:20px 10px">Nenhum vídeo carregado</div>
+      </div>
+    </div>
+
+    <div class="video-main">
+      <div class="video-player-area" id="apolloPlayerArea">
+        <div style="opacity:0.3;text-align:center">
+          <div style="font-size:48px">▶</div>
+          <div class="player-placeholder-label">SEM VÍDEO</div>
+        </div>
+      </div>
+      <div class="video-query-row">
+        <input class="hz-input" id="apolloVideoQuery"
+          placeholder="Pergunta sobre o vídeo..." style="flex:1">
+        <button class="hz-btn hz-btn-accent" onclick="analyseVideo('apollo')">Analisar</button>
+      </div>
+    </div>
+
+    <div class="video-right">
+      <div class="hz-panel" style="height:100%">
+        <div class="hz-panel-header">Resultados</div>
+        <div class="hz-panel-body" id="apolloVideoResults">
+          <div class="hz-empty">Os resultados aparecem aqui.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /video-workspace -->
+</div>

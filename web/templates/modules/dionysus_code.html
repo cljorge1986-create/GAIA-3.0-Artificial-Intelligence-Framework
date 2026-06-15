@@ -1,0 +1,38 @@
+{# MÓDULO: Dionysus — Código  |  JS: dionysus_content.js #}
+<div id="moduleCode" class="module-panel">
+  <div class="mod-header">
+    <div class="mod-header-title" style="color:#f97316">DIONYSUS · Código</div>
+    <div class="mod-header-sub">Assistente de programação</div>
+    <select class="hz-select" id="codeLang" style="margin-left:auto">
+      <option>Python</option><option>JavaScript</option><option>TypeScript</option>
+      <option>Rust</option><option>Go</option><option>C++</option>
+      <option>Java</option><option>SQL</option>
+    </select>
+    <button class="hz-btn hz-btn-primary"  onclick="runCode()">▶ Executar</button>
+    <button class="hz-btn hz-btn-ghost"    onclick="explainCode()">💡 Explicar</button>
+    <button class="hz-btn hz-btn-ghost"    onclick="optimizeCode()">⚡ Optimizar</button>
+  </div>
+  <div class="code-workspace">
+    <div class="code-editor-wrap">
+      <div class="code-panel-header">
+        Editor
+        <button class="hz-btn hz-btn-ghost code-clear-btn"
+          onclick="clearCode()">Limpar</button>
+      </div>
+      <textarea class="code-editor" id="codeEditor"
+        placeholder="// Escreve ou cola código aqui...&#10;// Ctrl+Enter para executar"
+        onkeydown="if((event.ctrlKey||event.metaKey)&&event.key==='Enter')runCode()"></textarea>
+    </div>
+    <div class="code-output-wrap">
+      <div class="code-panel-header">
+        Output / Análise
+        <button class="hz-btn hz-btn-ghost code-clear-btn"
+          onclick="document.getElementById('codeOutput').innerHTML='<div class=hz-empty>Output limpo.</div>'">
+          Limpar</button>
+      </div>
+      <div class="code-output" id="codeOutput">
+        <div class="hz-empty">O output aparece aqui após execução.</div>
+      </div>
+    </div>
+  </div>
+</div>

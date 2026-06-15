@@ -1,0 +1,48 @@
+{# ════════════════════════════════
+   MÓDULO: Apollo — Imagens 3D
+   JS:  static/js/modules/apollo_3d_viewer.js  (type=module)
+   ════════════════════════════════ #}
+<div id="moduleApollo3D" class="module-panel">
+
+  <div class="mod-header">
+    <div class="mod-header-title">APOLLO · Imagens 3D</div>
+    <div class="mod-header-sub">Visualização de modelos GLB/GLTF</div>
+  </div>
+
+  <div class="two-col-workspace">
+
+    <div class="two-col-left">
+      <div class="viewer3d-wrap" id="viewer3dWrap">
+        <canvas id="threeCanvas" class="viewer3d-canvas"></canvas>
+        <div class="viewer3d-overlay">
+          <button class="viewer3d-btn" title="Reset câmara"  onclick="resetCamera3D()">↺</button>
+          <button class="viewer3d-btn" title="Wireframe"     onclick="toggleWireframe()">⬡</button>
+          <button class="viewer3d-btn" title="Limpar cena"   onclick="resetScene3D()">✕</button>
+        </div>
+        <div id="viewer3dEmpty" class="viewer3d-empty">
+          <div style="font-size:36px;opacity:0.3">🌐</div>
+          <div class="viewer3d-hint">CARREGA UM MODELO GLB/GLTF</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:8px">
+        <button class="hz-btn hz-btn-primary"
+          onclick="document.getElementById('gltfInput').click()">
+          📂 Carregar modelo
+        </button>
+        <input type="file" id="gltfInput" accept=".glb,.gltf" style="display:none"
+          onchange="load3DModel(this.files[0])">
+      </div>
+    </div>
+
+    <div class="two-col-right">
+      <div class="hz-panel">
+        <div class="hz-panel-header">Info do Modelo</div>
+        <div class="hz-panel-body" id="model3dInfo">
+          <div class="hz-empty">Informações do modelo aparecem aqui.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

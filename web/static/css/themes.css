@@ -1,0 +1,86 @@
+/* ═══════════════════════════════════════════════════
+   GAIA 2.0 — Temas de cor
+   Aplicados via:  <html data-theme="nome">
+   ═══════════════════════════════════════════════════ */
+
+[data-theme="green-blue"], :root {
+  --hz-black: #060e08; --hz-dark: #0a1a0e; --hz-panel: rgba(8,20,11,0.88); --hz-card: rgba(12,28,16,0.80);
+  --accent1: #b6ff4d; --accent1-dim: rgba(182,255,77,0.7); --accent1-glow: rgba(182,255,77,0.18); --accent1-mist: rgba(182,255,77,0.06);
+  --accent2: #00d4ff; --accent2-dim: rgba(0,212,255,0.65); --accent2-glow: rgba(0,212,255,0.14); --accent2-mist: rgba(0,212,255,0.05);
+  --hz-border: rgba(182,255,77,0.12); --hz-border-dim: rgba(182,255,77,0.06);
+  --hz-text: #d7ffb0; --hz-text-dim: #8aab80; --hz-text-muted: rgba(182,255,77,0.45);
+  --bg-grad1: rgba(182,255,77,0.04); --bg-grad2: rgba(0,212,255,0.04);
+  --scrollbar: linear-gradient(180deg,#b6ff4d,rgba(124,255,77,0.4));
+}
+[data-theme="blue-white"] {
+  --hz-black: #030c18; --hz-dark: #061428; --hz-panel: rgba(4,14,30,0.90); --hz-card: rgba(6,18,36,0.82);
+  --accent1: #38bdf8; --accent1-dim: rgba(56,189,248,0.7); --accent1-glow: rgba(56,189,248,0.20); --accent1-mist: rgba(56,189,248,0.07);
+  --accent2: #e2f8ff; --accent2-dim: rgba(226,248,255,0.65); --accent2-glow: rgba(226,248,255,0.14); --accent2-mist: rgba(226,248,255,0.05);
+  --hz-border: rgba(56,189,248,0.14); --hz-border-dim: rgba(56,189,248,0.07);
+  --hz-text: #e0f2fe; --hz-text-dim: #7bafc8; --hz-text-muted: rgba(56,189,248,0.45);
+  --bg-grad1: rgba(56,189,248,0.05); --bg-grad2: rgba(226,248,255,0.03);
+  --scrollbar: linear-gradient(180deg,#38bdf8,rgba(56,189,248,0.3));
+}
+[data-theme="blue-black"] {
+  --hz-black: #01050f; --hz-dark: #020a18; --hz-panel: rgba(2,8,20,0.92); --hz-card: rgba(3,10,24,0.85);
+  --accent1: #3b82f6; --accent1-dim: rgba(59,130,246,0.7); --accent1-glow: rgba(59,130,246,0.20); --accent1-mist: rgba(59,130,246,0.07);
+  --accent2: #93c5fd; --accent2-dim: rgba(147,197,253,0.65); --accent2-glow: rgba(147,197,253,0.14); --accent2-mist: rgba(147,197,253,0.05);
+  --hz-border: rgba(59,130,246,0.16); --hz-border-dim: rgba(59,130,246,0.07);
+  --hz-text: #bfdbfe; --hz-text-dim: #6090c0; --hz-text-muted: rgba(59,130,246,0.45);
+  --bg-grad1: rgba(59,130,246,0.05); --bg-grad2: rgba(147,197,253,0.03);
+  --scrollbar: linear-gradient(180deg,#3b82f6,rgba(59,130,246,0.3));
+}
+[data-theme="red-white"] {
+  --hz-black: #120404; --hz-dark: #1e0606; --hz-panel: rgba(20,4,4,0.90); --hz-card: rgba(28,6,6,0.82);
+  --accent1: #f87171; --accent1-dim: rgba(248,113,113,0.7); --accent1-glow: rgba(248,113,113,0.20); --accent1-mist: rgba(248,113,113,0.07);
+  --accent2: #fef2f2; --accent2-dim: rgba(254,242,242,0.65); --accent2-glow: rgba(254,242,242,0.12); --accent2-mist: rgba(254,242,242,0.05);
+  --hz-border: rgba(248,113,113,0.15); --hz-border-dim: rgba(248,113,113,0.07);
+  --hz-text: #fee2e2; --hz-text-dim: #c08080; --hz-text-muted: rgba(248,113,113,0.45);
+  --bg-grad1: rgba(248,113,113,0.05); --bg-grad2: rgba(254,242,242,0.03);
+  --scrollbar: linear-gradient(180deg,#f87171,rgba(248,113,113,0.3));
+}
+[data-theme="red-black"] {
+  --hz-black: #0a0101; --hz-dark: #120202; --hz-panel: rgba(12,2,2,0.92); --hz-card: rgba(16,3,3,0.85);
+  --accent1: #dc2626; --accent1-dim: rgba(220,38,38,0.7); --accent1-glow: rgba(220,38,38,0.22); --accent1-mist: rgba(220,38,38,0.07);
+  --accent2: #fca5a5; --accent2-dim: rgba(252,165,165,0.65); --accent2-glow: rgba(252,165,165,0.14); --accent2-mist: rgba(252,165,165,0.05);
+  --hz-border: rgba(220,38,38,0.18); --hz-border-dim: rgba(220,38,38,0.08);
+  --hz-text: #fecaca; --hz-text-dim: #9a4444; --hz-text-muted: rgba(220,38,38,0.45);
+  --bg-grad1: rgba(220,38,38,0.06); --bg-grad2: rgba(252,165,165,0.03);
+  --scrollbar: linear-gradient(180deg,#dc2626,rgba(220,38,38,0.3));
+}
+[data-theme="amber-black"] {
+  --hz-black: #0c0800; --hz-dark: #181200; --hz-panel: rgba(16,10,0,0.92); --hz-card: rgba(20,14,2,0.85);
+  --accent1: #f59e0b; --accent1-dim: rgba(245,158,11,0.7); --accent1-glow: rgba(245,158,11,0.22); --accent1-mist: rgba(245,158,11,0.07);
+  --accent2: #fde68a; --accent2-dim: rgba(253,230,138,0.65); --accent2-glow: rgba(253,230,138,0.14); --accent2-mist: rgba(253,230,138,0.05);
+  --hz-border: rgba(245,158,11,0.16); --hz-border-dim: rgba(245,158,11,0.07);
+  --hz-text: #fef3c7; --hz-text-dim: #a07030; --hz-text-muted: rgba(245,158,11,0.45);
+  --bg-grad1: rgba(245,158,11,0.06); --bg-grad2: rgba(253,230,138,0.03);
+  --scrollbar: linear-gradient(180deg,#f59e0b,rgba(245,158,11,0.3));
+}
+[data-theme="purple-black"] {
+  --hz-black: #06020f; --hz-dark: #0d0518; --hz-panel: rgba(8,3,20,0.92); --hz-card: rgba(12,4,26,0.85);
+  --accent1: #a855f7; --accent1-dim: rgba(168,85,247,0.7); --accent1-glow: rgba(168,85,247,0.22); --accent1-mist: rgba(168,85,247,0.07);
+  --accent2: #e9d5ff; --accent2-dim: rgba(233,213,255,0.65); --accent2-glow: rgba(233,213,255,0.14); --accent2-mist: rgba(233,213,255,0.05);
+  --hz-border: rgba(168,85,247,0.16); --hz-border-dim: rgba(168,85,247,0.07);
+  --hz-text: #ede9fe; --hz-text-dim: #8060a0; --hz-text-muted: rgba(168,85,247,0.45);
+  --bg-grad1: rgba(168,85,247,0.06); --bg-grad2: rgba(233,213,255,0.03);
+  --scrollbar: linear-gradient(180deg,#a855f7,rgba(168,85,247,0.3));
+}
+
+/* Aliases globais usados no CSS (não mudar estes nomes) */
+:root {
+  --hz-green:      var(--accent1);
+  --hz-green-dim:  var(--accent1-dim);
+  --hz-green-glow: var(--accent1-glow);
+  --hz-green-mist: var(--accent1-mist);
+  --hz-blue:       var(--accent2);
+  --hz-blue-dim:   var(--accent2-dim);
+  --hz-blue-glow:  var(--accent2-glow);
+  --hz-blue-mist:  var(--accent2-mist);
+  --font-ui:   'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --sidebar-w: 300px;
+  --topbar-h:  52px;
+  --radius-sm: 8px; --radius-md: 14px; --radius-lg: 22px;
+  --t-fast: 0.18s ease; --t-mid: 0.30s ease;
+}

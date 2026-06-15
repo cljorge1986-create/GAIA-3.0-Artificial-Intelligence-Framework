@@ -1,0 +1,110 @@
+<div id="sidebar">
+
+  <div class="sidebar-section-title">Módulos</div>
+  <div class="mod-list">
+
+    <!-- GAIA Core -->
+    <button class="mod-btn active" id="modBtn-gaia" onclick="selectModule('gaia')">
+      <span class="mod-icon">🌳</span>
+      <span class="mod-label">GAIA</span>
+      <span class="mod-tag">CORE</span>
+    </button>
+
+    <!-- APOLLO -->
+    <button class="mod-btn" id="modBtn-apollo" onclick="toggleSubmenu('apollo')" style="--mod-color:#38bdf8">
+      <span class="mod-icon">🔭</span>
+      <span class="mod-label">APOLLO</span>
+      <span class="mod-tag">VISION</span>
+      <span class="mod-arrow">▶</span>
+    </button>
+    <div class="sub-menu" id="sub-apollo">
+      <button class="sub-btn" id="subBtn-apollo2d" onclick="selectSubModule('apollo2d','apollo')">
+        <span class="sub-icon">🖼️</span> Imagens 2D
+      </button>
+      <button class="sub-btn" id="subBtn-apollo3d" onclick="selectSubModule('apollo3d','apollo')">
+        <span class="sub-icon">🌐</span> Imagens 3D
+      </button>
+      <button class="sub-btn" id="subBtn-apolloVideo" onclick="selectSubModule('apolloVideo','apollo')">
+        <span class="sub-icon">🎬</span> Vídeo
+      </button>
+    </div>
+
+    <!-- DIONYSUS -->
+    <button class="mod-btn" id="modBtn-dionysus" onclick="openDionysus()" style="--mod-color:#f97316">
+      <span class="mod-icon">🎭</span>
+      <span class="mod-label">DIONYSUS</span>
+      <span class="mod-tag">CREATE</span>
+      <span class="mod-arrow">▶</span>
+    </button>
+    <div class="sub-menu" id="sub-dionysus">
+      <button class="sub-btn" id="subBtn-dionysus2d" onclick="selectSubModule('dionysus2d','dionysus')">
+        <span class="sub-icon">🖼️</span> Imagens 2D
+      </button>
+      <button class="sub-btn" id="subBtn-dionysus3d" onclick="selectSubModule('dionysus3d','dionysus')">
+        <span class="sub-icon">🌐</span> Imagens 3D
+      </button>
+      <button class="sub-btn" id="subBtn-dionysusVideo" onclick="selectSubModule('dionysusVideo','dionysus')">
+        <span class="sub-icon">🎬</span> Vídeo
+      </button>
+      <!-- Textos (sub-sub) -->
+      <button class="sub-btn" id="subBtn-dionysusText" onclick="toggleSubSub('dionysus-text')">
+        <span class="sub-icon">📝</span> Textos
+        <span class="mod-arrow" id="arrow-dionysus-text" style="font-size:9px;margin-left:auto">▶</span>
+      </button>
+      <div class="sub-sub-menu" id="sub-sub-dionysus-text">
+        <button class="sub-sub-btn" id="subSubBtn-articles" onclick="selectSubModule('articles','dionysus')">📰 Artigos</button>
+        <button class="sub-sub-btn" id="subSubBtn-books"    onclick="selectSubModule('books','dionysus')">📚 Livros</button>
+        <button class="sub-sub-btn" id="subSubBtn-history"  onclick="selectSubModule('history','dionysus')">📜 História</button>
+        <button class="sub-sub-btn" id="subSubBtn-mails"    onclick="selectSubModule('mails','dionysus')">📧 Mails</button>
+      </div>
+      <button class="sub-btn" id="subBtn-code" onclick="selectSubModule('code','dionysus')">
+        <span class="sub-icon">💻</span> Código
+      </button>
+    </div>
+
+    <!-- ARTEMIS -->
+    <button class="mod-btn" id="modBtn-artemis" onclick="selectModule('artemis')" style="--mod-color:#7cff4d">
+      <span class="mod-icon">🏹</span>
+      <span class="mod-label">ARTEMIS</span>
+      <span class="mod-tag">API</span>
+    </button>
+
+    <!-- THOTH -->
+    <button class="mod-btn" id="modBtn-thoth" onclick="selectModule('thoth')" style="--mod-color:#00d4ff">
+      <span class="mod-icon">📖</span>
+      <span class="mod-label">THOTH</span>
+      <span class="mod-tag">TEXT</span>
+    </button>
+
+    <!-- MEMORY -->
+    <button class="mod-btn" id="modBtn-memory" onclick="selectModule('memory')" style="--mod-color:#ff884d">
+      <span class="mod-icon">🧠</span>
+      <span class="mod-label">MEMORY</span>
+      <span class="mod-tag">MEM</span>
+    </button>
+
+  </div><!-- /mod-list -->
+
+  <!-- Chats GAIA (só visível no modo GAIA) -->
+  <div id="gaiaSidebarBlock" style="display:none">
+    <div class="sidebar-section-title" style="margin-top:14px">Conversas</div>
+    <button class="sidebar-btn" onclick="createNewChat()" style="margin-bottom:8px">＋ Nova conversa</button>
+    <div id="gaiaChatsList"></div>
+    <button class="sidebar-btn" id="expandChatBtn" style="margin-top:10px">⛶ Expandir chat</button>
+  </div>
+	<!-- Context menu global -->
+	<div id="chatContextMenu">
+	  <div class="ctx-item" onclick="renameChat()">✏️ Renomear</div>
+	  <div class="ctx-item" onclick="deleteChat()">🗑️ Eliminar</div>
+	</div>
+  <!-- Memória -->
+  <div id="memorySidebarBlock" style="display:none">
+    <div class="sidebar-section-title" style="margin-top:14px">Memória Curta</div>
+    <div id="memoryShort"  class="memory-block"></div>
+    <div class="sidebar-section-title" style="margin-top:10px">Memória Média</div>
+    <div id="memoryMedium" class="memory-block"></div>
+    <div class="sidebar-section-title" style="margin-top:10px">Memória Longa</div>
+    <div id="memoryLong"   class="memory-block"></div>
+  </div>
+
+</div><!-- /sidebar -->

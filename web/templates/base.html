@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="green-blue">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAIA 2.0{% block title %}{% endblock %}</title>
+<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- CSS base (temas + layout) -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/themes.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/settings.css') }}">
+
+<!-- CSS extra por página (opcional) -->
+{% block extra_css %}{% endblock %}
+
+<!-- Three.js importmap -->
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.152.0/build/three.module.js"}}
+</script>
+<script>
+  const image3DLocation = "{{ url_for('static', filename='images/three.glb') }}";
+</script>
+</head>
+<body>
+
+<!-- ═══ PAINEL DE CONFIGURAÇÕES ════════════════════════════ -->
+{% include 'partials/settings_panel.html' %}
+
+<!-- ═══ TOPBAR ══════════════════════════════════════════════ -->
+{% include 'partials/topbar.html' %}
+
+<!-- ═══ SHELL ════════════════════════════════════════════════ -->
+<div id="shell">
+
+  <!-- ═══ SIDEBAR ════════════════════════════════════════════ -->
+  {% include 'partials/sidebar.html' %}
+
+  <!-- ═══ CONTENT — injectado por cada módulo ═══════════════ -->
+  <div id="content">
+    <div id="canvasInfo">🌿 GAIA — selecciona um módulo</div>
+    {% block modules %}{% endblock %}
+  </div>
+
+</div><!-- /shell -->
+
+<!-- Voice visualizer -->
+<div id="voiceViz"></div>
+
+<!-- ═══ JS CORE ══════════════════════════════════════════════ -->
+<script src="{{ url_for('static', filename='js/core/settings.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/navigation.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/utils.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/clock.js') }}"></script>
+<script src="{{ url_for('static', filename='js/core/speech.js') }}"></script>
+
+<!-- JS extra por página -->
+{% block extra_js %}{% endblock %}
+
+<!-- Three.js canvas global (fundo) -->
+<script type="module" src="{{ url_for('static', filename='js/core/canvas3d.js') }}"></script>
+
+<!-- Boot -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    loadSettingsFromStorage();
+    activateModuleUI('gaia');
+    initThothModes();
+    startClock();
+  });
+</script>
+
+</body>
+</html>

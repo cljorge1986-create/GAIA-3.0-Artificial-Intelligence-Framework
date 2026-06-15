@@ -1,0 +1,116 @@
+{# MÓDULO: Artemis — APIs  |  JS: static/js/modules/artemis.js #}
+<div id="moduleArtemis" class="module-panel">
+  <div class="mod-header">
+    <div class="mod-header-title" style="color:#7cff4d">ARTEMIS · APIs</div>
+    <div class="mod-header-sub">Módulos de integração com serviços externos</div>
+  </div>
+  <div class="artemis-workspace">
+
+    <div class="settings-section-label">APIs Disponíveis</div>
+    <div class="artemis-api-grid" id="artemisApiGrid">
+
+      <!-- Weather (activo) -->
+      <div class="artemis-api-card active" data-api="weather" onclick="selectApi('weather',this)">
+        <div class="api-card-icon">🌦️</div>
+        <div class="api-card-name">Weather</div>
+        <div class="api-card-desc">Condições meteorológicas em tempo real, previsão e alertas</div>
+        <div class="api-card-status">
+          <div class="api-status-dot"></div>
+          <span class="api-status-label">Activo</span>
+        </div>
+      </div>
+
+      <!-- Maps (placeholder — adicionar nova API aqui) -->
+      <div class="artemis-api-card api-coming-soon">
+        <div class="api-card-icon">🗺️</div>
+        <div class="api-card-name">Maps</div>
+        <div class="api-card-desc">Geolocalização, rotas e mapas interactivos</div>
+        <div class="api-card-status">
+          <div class="api-status-dot pending"></div>
+          <span class="api-status-label">Em breve</span>
+        </div>
+      </div>
+
+      <!-- Finance (placeholder) -->
+      <div class="artemis-api-card api-coming-soon">
+        <div class="api-card-icon">📈</div>
+        <div class="api-card-name">Finance</div>
+        <div class="api-card-desc">Cotações, mercados financeiros e dados económicos</div>
+        <div class="api-card-status">
+          <div class="api-status-dot pending"></div>
+          <span class="api-status-label">Em breve</span>
+        </div>
+      </div>
+
+      <!-- Science (placeholder) -->
+      <div class="artemis-api-card api-coming-soon">
+        <div class="api-card-icon">🔬</div>
+        <div class="api-card-name">Science</div>
+        <div class="api-card-desc">Bases de dados científicas e artigos académicos</div>
+        <div class="api-card-status">
+          <div class="api-status-dot offline"></div>
+          <span class="api-status-label">Offline</span>
+        </div>
+      </div>
+
+    </div><!-- /artemis-api-grid -->
+
+    <!-- ── Painel Weather ── -->
+    <div id="apiPanel-weather" style="display:block">
+      <div class="settings-section-label">Módulo WEATHER</div>
+      <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap">
+        <input class="hz-input" id="weatherCity"
+          placeholder="Cidade ou coordenadas..." style="max-width:280px"
+          onkeydown="if(event.key==='Enter')fetchWeather()">
+        <select class="hz-select" id="weatherUnit">
+          <option value="metric">Celsius (°C)</option>
+          <option value="imperial">Fahrenheit (°F)</option>
+        </select>
+        <button class="hz-btn hz-btn-primary" onclick="fetchWeather()">🔍 Consultar</button>
+      </div>
+      <div id="weatherWidget" class="weather-widget" style="display:none">
+        <div class="weather-main">
+          <div class="weather-icon" id="wIcon">☀️</div>
+          <div>
+            <div style="display:flex;align-items:flex-start">
+              <div class="weather-temp" id="wTemp">--</div>
+              <div class="weather-unit" id="wUnit">°C</div>
+            </div>
+            <div class="weather-desc"     id="wDesc">--</div>
+            <div class="weather-location" id="wLocation">--</div>
+          </div>
+        </div>
+        <div class="weather-details">
+          <div class="weather-detail">
+            <div class="weather-detail-val" id="wHumidity">--%</div>
+            <div class="weather-detail-lbl">Humidade</div>
+          </div>
+          <div class="weather-detail">
+            <div class="weather-detail-val" id="wWind">-- km/h</div>
+            <div class="weather-detail-lbl">Vento</div>
+          </div>
+          <div class="weather-detail">
+            <div class="weather-detail-val" id="wPressure">-- hPa</div>
+            <div class="weather-detail-lbl">Pressão</div>
+          </div>
+          <div class="weather-detail">
+            <div class="weather-detail-val" id="wFeels">--°</div>
+            <div class="weather-detail-lbl">Sensação</div>
+          </div>
+        </div>
+      </div>
+      <div id="weatherEmpty" class="hz-empty" style="padding:30px 0">
+        Introduz uma cidade para consultar as condições meteorológicas.
+      </div>
+    </div>
+
+    {#
+      ── Para adicionar uma nova API no futuro:
+         1. Adiciona um card na artemis-api-grid acima (data-api="nome")
+         2. Adiciona aqui um novo bloco:  <div id="apiPanel-nome" style="display:none"> ... </div>
+         3. Cria o endpoint em gaia_server.py:  /api/nome
+         4. Adiciona a lógica JS em static/js/modules/artemis.js
+    #}
+
+  </div><!-- /artemis-workspace -->
+</div>

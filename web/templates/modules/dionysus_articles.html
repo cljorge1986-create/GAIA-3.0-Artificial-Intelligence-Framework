@@ -1,0 +1,23 @@
+{# MÓDULO: Dionysus — Artigos  |  JS: dionysus_content.js #}
+<div id="moduleArticles" class="module-panel">
+  <div class="mod-header">
+    <div class="mod-header-title" style="color:#f97316">DIONYSUS · Artigos</div>
+    <div class="mod-header-sub">Geração e análise de artigos jornalísticos</div>
+  </div>
+  <div class="text-module-workspace">
+    <div class="text-module-toolbar">
+      <input class="hz-input" id="articlesSearch"
+        placeholder="Pesquisar artigos..." style="max-width:300px">
+      <select class="hz-select" id="articlesCategory">
+        <option>Todas as categorias</option><option>Tecnologia</option>
+        <option>Ciência</option><option>Cultura</option>
+        <option>Negócios</option><option>Saúde</option>
+      </select>
+      <button class="hz-btn hz-btn-primary" onclick="generateArticle()">✦ Gerar artigo</button>
+      <button class="hz-btn hz-btn-ghost"   onclick="loadArticles()">↻ Carregar</button>
+    </div>
+    <div class="text-module-content" id="articlesContent">
+      <div class="hz-empty">Os artigos aparecem aqui. Carrega para actualizar ou gera um novo.</div>
+    </div>
+  </div>
+</div>

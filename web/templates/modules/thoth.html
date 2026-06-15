@@ -1,0 +1,62 @@
+{# MÓDULO: Thoth — Text Corrector  |  JS: static/js/modules/thoth.js #}
+<div id="moduleThoth" class="module-panel">
+  <div class="mod-header">
+    <div class="mod-header-title">THOTH · Corrector</div>
+    <div class="mod-header-sub">Correcção ortográfica, gramatical e tradução de texto</div>
+  </div>
+  <div class="two-col-workspace">
+    <div class="two-col-left">
+
+      <div class="mode-bar">
+        <span class="mode-bar-label">Modo</span>
+        <div class="mode-pills" id="modePills"></div>
+        <div class="mode-bar-sep"></div>
+        <span class="mode-bar-label" style="margin-left:4px">Traduzir</span>
+        <select class="hz-select" id="translateTo">
+          <option value="">— nenhum —</option>
+          <option value="en">Inglês</option>
+          <option value="es">Espanhol</option>
+          <option value="fr">Francês</option>
+          <option value="de">Alemão</option>
+          <option value="it">Italiano</option>
+          <option value="pt">Português</option>
+        </select>
+      </div>
+
+      <div class="hz-editor-wrap">
+        <textarea id="thothEditor" class="hz-editor"
+          placeholder="Escreve ou cola o texto aqui para corrigir..."
+          oninput="updateCharCount()"></textarea>
+        <div class="hz-editor-footer">
+          <span class="hz-char-count" id="thothCharCount">0 chars</span>
+          <button class="hz-btn hz-btn-accent" id="btnCorrect" onclick="runCorrection()">
+            <div id="thothSpinner" class="btn-spinner" style="display:none"></div>
+            Corrigir
+          </button>
+        </div>
+      </div>
+
+      <div id="thothFallback"    class="hz-fallback"></div>
+      <div id="thothResultBox"   class="result-box"></div>
+      <div id="thothTranslation" class="translation-box"></div>
+
+    </div><!-- /two-col-left -->
+
+    <div class="two-col-right">
+      <div class="hz-panel">
+        <div class="hz-panel-header">
+          Sugestões
+          <span id="thothSugBadge" class="sug-count-badge">0</span>
+        </div>
+        <div id="thothSugList" class="hz-panel-body">
+          <div class="hz-empty">As sugestões aparecem aqui após a correcção.</div>
+        </div>
+      </div>
+      <div class="hz-panel" id="thothStatsCard" style="display:none;margin-top:10px;flex-shrink:0">
+        <div class="hz-panel-header">Estatísticas</div>
+        <div class="stats-grid" id="thothStatsGrid"></div>
+      </div>
+    </div>
+
+  </div><!-- /two-col-workspace -->
+</div>

@@ -1,0 +1,25 @@
+{# MÓDULO: Dionysus — História  |  JS: dionysus_content.js #}
+<div id="moduleHistory" class="module-panel">
+  <div class="mod-header">
+    <div class="mod-header-title" style="color:#f97316">DIONYSUS · História</div>
+    <div class="mod-header-sub">Narrativas e ficção histórica</div>
+  </div>
+  <div class="text-module-workspace">
+    <div class="text-module-toolbar">
+      <select class="hz-select" id="historyEra">
+        <option>Todas as eras</option><option>Pré-história</option>
+        <option>Antiguidade</option><option>Idade Média</option>
+        <option>Renascimento</option><option>Época Moderna</option><option>Século XX</option>
+      </select>
+      <select class="hz-select" id="historyRegion">
+        <option>Todas as regiões</option><option>Europa</option>
+        <option>Ásia</option><option>Américas</option>
+        <option>África</option><option>Oceânia</option>
+      </select>
+      <button class="hz-btn hz-btn-primary" onclick="generateHistory()">✦ Gerar narrativa</button>
+    </div>
+    <div class="text-module-content" id="historyContent">
+      <div class="hz-empty">Selecciona uma era e região para gerar uma narrativa histórica.</div>
+    </div>
+  </div>
+</div>

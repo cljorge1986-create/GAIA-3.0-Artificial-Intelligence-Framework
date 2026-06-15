@@ -1,0 +1,41 @@
+{# ════════════════════════════════
+   MÓDULO: GAIA Chat
+   JS:  static/js/modules/gaia_chat.js
+   ════════════════════════════════ #}
+<div id="moduleGaia" class="module-panel">
+
+  <div id="chatArea" class="chat-area">
+    <div class="chat-welcome" id="chatWelcome">
+      <h2>GAIA</h2>
+      <div class="chat-profile-badge" id="chatProfileBadge">WARM</div>
+      <p style="margin-top:12px">Sistema cognitivo — como posso ajudar?</p>
+    </div>
+  </div>
+
+  <div class="chat-input-section">
+    <div style="width:100%;max-width:720px">
+      <div class="chat-input-box">
+
+        <!-- Botão de anexo -->
+        <div style="position:relative;display:inline-block">
+          <button class="chat-tool-btn" onclick="toggleFileMenu()" title="Ficheiro">📎</button>
+          <div id="fileMenu" class="file-menu" style="display:none">
+            <div class="ctx-item" onclick="selectImage()">🖼️ Imagem</div>
+            <div class="ctx-item" onclick="selectFile()">📄 Documento</div>
+          </div>
+        </div>
+
+        <button class="chat-tool-btn" onclick="startRecording()" title="Voz">🎤</button>
+
+        <textarea id="chatInput" class="chat-textarea" rows="1"
+          placeholder="Fala com GAIA..."></textarea>
+
+        <button class="chat-send-btn" onclick="sendToGAIA()">↑</button>
+      </div>
+      <div class="chat-disclaimer">GAIA pode cometer erros. Verifica informação importante.</div>
+    </div>
+  </div>
+
+  <input type="file" id="imgInput" accept="image/*"              style="display:none">
+  <input type="file" id="docInput" accept=".pdf,.doc,.docx,.txt" style="display:none">
+</div>

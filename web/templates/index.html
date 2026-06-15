@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %} — CORE{% endblock %}
+
+{% block modules %}
+
+  {# ── GAIA Chat ── #}
+  {% include 'modules/gaia_chat.html' %}
+
+  {# ── APOLLO ── #}
+  {% include 'modules/apollo_2d.html' %}
+  {% include 'modules/apollo_3d.html' %}
+  {% include 'modules/apollo_video.html' %}
+
+  {# ── DIONYSUS ── #}
+  {% include 'modules/dionysus_2d.html' %}
+  {% include 'modules/dionysus_3d.html' %}
+  {% include 'modules/dionysus_video.html' %}
+  {% include 'modules/dionysus_articles.html' %}
+  {% include 'modules/dionysus_books.html' %}
+  {% include 'modules/dionysus_history.html' %}
+  {% include 'modules/dionysus_hub.html' %}
+  {% include 'modules/dionysus_mails.html' %}
+  {% include 'modules/dionysus_code.html' %}
+
+  {# ── ARTEMIS ── #}
+  {% include 'modules/artemis.html' %}
+
+  {# ── THOTH ── #}
+  {% include 'modules/thoth.html' %}
+
+  {# ── MEMORY ── #}
+  {% include 'modules/memory.html' %}
+
+{% endblock %}
+
+{% block extra_js %}
+  {# JS de cada módulo carregado apenas nesta página #}
+  <script src="{{ url_for('static', filename='js/modules/gaia_chat.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/modules/apollo_2d.js') }}"></script>
+  <script type="module" src="{{ url_for('static', filename='js/modules/apollo_3d_viewer.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/modules/apollo_video.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/modules/dionysus_content.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/modules/artemis.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/modules/thoth.js') }}"></script>
+  <script type="module" src="{{ url_for('static', filename='js/modules/apollo_3d_viewer.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,68 @@
+{# ════════════════════════════════
+   MÓDULO: Apollo — Imagens 2D
+   JS:  static/js/modules/apollo_2d.js
+   ════════════════════════════════ #}
+<div id="moduleApollo2D" class="module-panel">
+
+  <div class="mod-header">
+    <div class="mod-header-title">APOLLO · Imagens 2D</div>
+    <div class="mod-header-sub">Análise e classificação de imagens por IA</div>
+  </div>
+
+  <div class="two-col-workspace">
+
+    <div class="two-col-left">
+
+      <!-- Drop zone -->
+      <div class="hz-drop-zone" id="imgDropZone">
+        <input type="file" id="imgFileInput" accept="image/*"
+          onchange="onImgFileSelect(this.files[0])">
+        <div class="drop-icon-hz">⬡</div>
+        <div class="drop-label-hz">Arrasta uma imagem ou clica para seleccionar</div>
+        <div class="drop-hint-hz">JPEG · PNG · WEBP · GIF · máx 10 MB</div>
+      </div>
+
+      <!-- Preview -->
+      <div class="hz-preview-wrap" id="imgPreviewWrap" style="display:none">
+        <img id="imgPreviewImg" class="hz-preview-img" alt="Preview">
+        <div class="hz-preview-overlay">
+          <button class="hz-btn hz-btn-ghost" style="padding:4px 8px;font-size:11px"
+            onclick="clearImgFile()">✕</button>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <input class="hz-input" id="imgQuestion"
+          placeholder="Pergunta sobre a imagem (opcional)..."
+          onkeydown="if((event.ctrlKey||event.metaKey)&&event.key==='Enter')analyseImage()">
+        <button class="hz-btn hz-btn-primary" id="btnAnalyse"
+          onclick="analyseImage()" disabled>
+          <div id="imgSpinner" class="btn-spinner" style="display:none"></div>
+          Analisar
+        </button>
+        <button class="hz-btn hz-btn-ghost" onclick="clearImgAll()">Limpar</button>
+      </div>
+
+      <div id="imgWarnBox"   class="hz-fallback"></div>
+      <div id="imgResultBox" class="result-box" style="display:none"></div>
+      <div id="imgTranslation" class="translation-box"></div>
+
+    </div><!-- /two-col-left -->
+
+    <div class="two-col-right">
+      <div class="hz-panel">
+        <div class="hz-panel-header">
+          Análise
+          <button class="hz-btn hz-btn-ghost"
+            style="padding:3px 9px;font-size:10px"
+            onclick="exportImgResult()">Exportar</button>
+        </div>
+        <div class="hz-panel-body" id="imgPanelBody">
+          <div class="hz-empty">A análise aparece aqui.<br>Carrega uma imagem para começar.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /two-col-workspace -->
+</div>

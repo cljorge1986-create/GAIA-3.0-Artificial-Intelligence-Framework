@@ -1,0 +1,55 @@
+{# MÓDULO: Dionysus — Mails  |  JS: dionysus_content.js #}
+<div id="moduleMails" class="module-panel">
+  <div class="mod-header">
+    <div class="mod-header-title" style="color:#f97316">DIONYSUS · Mails</div>
+    <div class="mod-header-sub">Redacção e gestão de emails</div>
+  </div>
+  <div class="two-col-workspace">
+    <div class="two-col-left">
+      <div class="hz-card-block">
+        <div class="mail-field-row">
+          <span class="mail-field-label">Para:</span>
+          <input class="hz-input" id="mailTo" placeholder="destinatario@email.com">
+        </div>
+        <div class="mail-field-row">
+          <span class="mail-field-label">Assunto:</span>
+          <input class="hz-input" id="mailSubject" placeholder="Assunto do email">
+        </div>
+        <div class="mail-field-row">
+          <span class="mail-field-label">Tom:</span>
+          <select class="hz-select" id="mailTone">
+            <option>Formal</option><option>Informal</option>
+            <option>Profissional</option><option>Amigável</option><option>Urgente</option>
+          </select>
+        </div>
+        <textarea class="hz-editor" id="mailContext"
+          placeholder="Descreve o conteúdo do email..."
+          style="min-height:100px;margin-top:8px"></textarea>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button class="hz-btn hz-btn-primary" onclick="generateMail()">✦ Gerar email</button>
+          <button class="hz-btn hz-btn-ghost"   onclick="clearMail()">Limpar</button>
+        </div>
+      </div>
+      <div id="mailOutput" class="result-box" style="display:none;flex:1"></div>
+    </div>
+    <div class="two-col-right">
+      <div class="hz-panel">
+        <div class="hz-panel-header">Templates</div>
+        <div class="hz-panel-body">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <button class="hz-btn hz-btn-ghost template-btn"
+              onclick="loadMailTemplate('meeting')">📅 Marcação de reunião</button>
+            <button class="hz-btn hz-btn-ghost template-btn"
+              onclick="loadMailTemplate('followup')">🔔 Follow-up</button>
+            <button class="hz-btn hz-btn-ghost template-btn"
+              onclick="loadMailTemplate('proposal')">📋 Proposta comercial</button>
+            <button class="hz-btn hz-btn-ghost template-btn"
+              onclick="loadMailTemplate('complaint')">⚠️ Reclamação formal</button>
+            <button class="hz-btn hz-btn-ghost template-btn"
+              onclick="loadMailTemplate('thanks')">🙏 Agradecimento</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
