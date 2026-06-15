@@ -143,7 +143,7 @@ GAIA3.0/
 <p> │</p>
 <p> ├── db/</p>
 <p> │   └── database management</p>
- │
+ <p>│
  ├── gaia_core/
  │   └── artificial intelligence core
  │
@@ -161,3 +161,4 @@ GAIA3.0/
  │       └── images
  │
  └── run_gaia.py
+ </p>
