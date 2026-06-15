@@ -13,6 +13,9 @@
 ## Sobre o projeto
 
 **GAIA 3.0** é uma plataforma de inteligência artificial desenvolvida para funcionar como um ambiente modular de interação entre humanos e sistemas inteligentes.
+## 🖥️ Preview
+
+<img src="docs/images/gaia-preview.png" width="900">
 
 O objetivo do projeto é criar uma IA que não seja apenas um chatbot, mas uma infraestrutura capaz de integrar:
 
